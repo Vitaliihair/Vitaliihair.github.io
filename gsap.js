@@ -7,5 +7,19 @@
 
 gsap.from ('.acquaintance__logo', {
     scale: 0.1 ,
-    duration: 2 ,
+    duration: 1.5 ,
 })
+
+gsap.from ('.acquaintance__container--title', {
+    x: 700 ,
+    duration: 1 ,
+    delay: 0.6,
+})
+
+gsap.from ('.acquaintance__container--btn', {
+    x: -500 ,
+    duration: 1 ,
+    delay: 0.2,
+    
+})
+

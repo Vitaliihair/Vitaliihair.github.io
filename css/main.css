@@ -92,7 +92,7 @@ html, body {
   opacity:0.8;
 }
 
-.nav-list__link--active{
+/* .nav-list__link--active{
   position: relative;
 }
 
@@ -107,7 +107,7 @@ html, body {
   height: 2px;
   width: 100%;
   background-color: var(--accent)  ;
-}
+} */
 
 .acquaintance__logo {
   margin: 0px 20px;
@@ -148,14 +148,14 @@ html, body {
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: -0,5px;
-
-}
-
-.acquaintance__container--title strong {
   font-size: 60px;
-  /* font-size: (1.875rem, 1.193rem + 3.41vw, 3.75rem); */
-  font-weight: 700;
 }
+
+/* .acquaintance__container--title strong {
+  
+  font-size: (1.875rem, 1.193rem + 3.41vw, 3.75rem);
+  font-weight: 700;
+} */
 
 .acquaintance__container--title em {
   font-style: normal;
