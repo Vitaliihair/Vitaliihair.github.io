@@ -1,5 +1,5 @@
-// import { gsap } from 'gsap-core';
-ymaps.ready(Init);
+
+
 
 let center = [43.5951976893704,39.717826278298716];
 
@@ -15,6 +15,7 @@ function Init(){
     map.geoObjects.add(placemark);
 }
 
+ymaps.ready(Init);
 
 // Shake Button
 
@@ -42,4 +43,7 @@ function shakeButton() {
   }
   
   shakeButton();
+
+
+
 

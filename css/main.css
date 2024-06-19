@@ -35,6 +35,8 @@
   }
 
 html, body {
+  scroll-behavior: initial;
+  overflow: hidden;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -77,8 +79,10 @@ html, body {
 .nav-list {
   display: flex;
   align-items: center;
-  column-gap: 50px;
-  font-size: 16px;
+  /* column-gap: 50px; */
+  column-gap: clamp(1.25rem, -6.25rem + 37.5vw, 3.125rem);
+  /* font-size: 16px; */
+  font-size: clamp(0.75rem, -0.85rem + 8vw, 1rem);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -129,7 +133,8 @@ html, body {
   align-items: center ;
   text-align: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: clamp(0rem, -7.5rem + 30vw, 1.875rem);
+  /* gap: 30px; */
 }
 
 
@@ -148,7 +153,8 @@ html, body {
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: -0,5px;
-  font-size: 60px;
+  /* font-size: 60px; */
+  font-size: clamp(2.25rem, 0.536rem + 8.57vw, 3.75rem);
 }
 
 /* .acquaintance__container--title strong {
@@ -193,10 +199,16 @@ html, body {
 
 /* Main */
 
+
+/* Portfilio  */
+
+
 .portfolio {
   margin-top: 40px;
-  margin-left: 115px;
-  margin-right: 115px;
+  /* margin-left: 50.5px;
+  margin-right: 50.5px; */
+  margin: 0 20px;
+  padding: 50px 0 50px;
   background-color: var(--dark-bg);
 }
 
@@ -214,6 +226,7 @@ html, body {
   letter-spacing: -0.5px;
   line-height: 130%;
   text-align: center ;
+   
 }
 
 /* .portfolio__container-title {
@@ -223,7 +236,7 @@ html, body {
 } */
 
 
-/* Portfilio  */
+
 
 
 .portfolio__container {
