@@ -192,6 +192,30 @@ html, body {
   top: 3px;
 }
 
+.acquaintance__btn {
+  position: sticky;
+  /* display: inline-block; */
+  height: 70 px;
+  padding: 30.9px 27.2px 30.51px;
+  border-radius: 10px;
+  background-color: var(--accent);
+  color: var(--white);
+  letter-spacing: 0.15px;
+  /* font-size: 36px; */
+  font-size: clamp(1.125rem, 0.596rem + 2.65vw, 2.25rem);
+  font-weight: medium ;
+  transition: opacity 0.5 ease-in;
+}
+
+.acquaintance__btn:hover {
+  opacity: 0.8;
+}
+
+.acquaintance__btn:active {
+  position: relative;
+  top: 3px;
+}
+
 
 /* Main */
 

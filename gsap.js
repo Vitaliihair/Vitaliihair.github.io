@@ -5,9 +5,10 @@
     easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
     direction: "vertical",
     gestureDirection: "vertical",
+    syncTouch: true,
     smooth: true,
     smoothTouch: false,
-    touchMultiplier: 2,
+    touchMultiplier: 1,
   });
   
   function raf(time) {
