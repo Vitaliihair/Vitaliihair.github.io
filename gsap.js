@@ -60,10 +60,11 @@ elements.forEach((element, index) => {
     scrollTrigger: {
       trigger: element,
       start: "top bottom",
+      end: "center 40%",
       scrub: true, // Привязка анимации к прокрутке
     },
     opacity: 0,
-    x: direction * 400,
+    x: direction * 600,
     duration: 1 + index
   });
 });

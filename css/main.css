@@ -157,11 +157,7 @@ html, body {
   font-size: clamp(2.25rem, 0.536rem + 8.57vw, 3.75rem);
 }
 
-/* .acquaintance__container--title strong {
-  
-  font-size: (1.875rem, 1.193rem + 3.41vw, 3.75rem);
-  font-weight: 700;
-} */
+
 
 .acquaintance__container--title em {
   font-style: normal;
@@ -208,7 +204,9 @@ html, body {
   /* margin-left: 50.5px;
   margin-right: 50.5px; */
   margin: 0 20px;
-  padding: 50px 0 50px;
+  /* padding: 50px 0 50px; */
+  padding-top: clamp(0rem, -5.556rem + 27.78vw, 3.125rem) ;
+  padding-bottom: 50px;
   background-color: var(--dark-bg);
 }
 
@@ -382,14 +380,14 @@ html, body {
 
 .container-info {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+  /* flex-wrap: wrap;
+  gap: 30px; */
+  /* justify-content: space-evenly;
+  align-items: center;  */
   padding: 50px 0 50px;
   color: var(--white);
   /* font-size: 20px; */
-  font-size: clamp(0.875rem, 0.446rem + 2.14vw, 1.25rem);
+  font-size: clamp(0.75rem, 0.265rem + 2.42vw, 1.25rem);
   font-weight: bold;
   letter-spacing: -0.5;
   text-align: center;
@@ -399,19 +397,39 @@ html, body {
   margin: 0px 20px;
 
 }
+.span-text{
+  /* height: 100%; */
+}
 
+.container-info--div {
+  /* width: 100%; */
+  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center; 
+  /* padding: 50px 0 50px; */
+  /* justify-content: space-evenly; */
+}
 
 .info__text {
   /* width: fit-content; */
- padding: 0px 50.5px;
- border: 2px dotted var(--white);
+  display: flex;
+  flex: 1;
+  max-width: 609px;
+  padding: 5px 10px;
+  border: 2px dotted var(--white);
   border-radius: 20px;
+  /* text-align: space-evenly; */
+  height: clamp(16.787rem, -2.329rem + 95.58vw, 36.5rem);
+   align-items:center;
 }
 
  .my-job{
   border: 2px dotted var(--white);
   border-radius: 20px;
-
+  height: 100%;
 }
 
 .contacts {
