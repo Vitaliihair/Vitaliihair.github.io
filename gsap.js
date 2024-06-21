@@ -5,8 +5,9 @@
     easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
     direction: "vertical",
     gestureDirection: "vertical",
+    syncTouch: true,
     smooth: true,
-    smoothTouch: true,
+    smoothTouch: false,
     touchMultiplier: 2,
   });
   
