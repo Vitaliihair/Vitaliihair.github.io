@@ -1,12 +1,12 @@
   // lenis
 
   const lenis = new Lenis({
-    duration: 2,
+    duration: 1,
     easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)),
     direction: "vertical",
     gestureDirection: "vertical",
     smooth: true,
-    smoothTouch: false,
+    smoothTouch: true,
     touchMultiplier: 2,
   });
   
