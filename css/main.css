@@ -214,6 +214,7 @@ html, body {
   border-radius: 10px 0px 0px 10px ;
   position: fixed;
   top: 70%; right: 0;
+  z-index: 100;
   transition: opacity 0.5 ease-in;
   text-orientation: upright;
   font-size: 16px;
@@ -434,9 +435,7 @@ html, body {
   margin: 0px 20px;
 
 }
-.span-text{
-  /* height: 100%; */
-}
+
 
 .container-info--div {
   /* width: 100%; */
@@ -456,6 +455,7 @@ html, body {
   flex: 1;
   max-width: 609px;
   padding: 5px 10px;
+  
   border: 2px dotted var(--white);
   border-radius: 20px;
   /* text-align: space-evenly; */
@@ -467,6 +467,7 @@ html, body {
   border: 2px dotted var(--white);
   border-radius: 20px;
   height: 100%;
+  
 }
 
 .contacts {
@@ -486,33 +487,41 @@ html, body {
 .all-contacts {
   display: flex;
   flex-wrap: wrap;
-  gap: 200px;
+  /* gap: 100px; */
+  gap: clamp(0.625rem, -2.891rem + 11.25vw, 6.25rem);
   justify-content: center;
   align-items: center;
-  padding: 50px 0 50px;
+  padding-top: clamp(0.313rem, -1.011rem + 6.62vw, 3.125rem);
+  padding-bottom: clamp(0.313rem, -1.011rem + 6.62vw, 3.125rem);
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
   color: var(--white);
   /* font-size: 20px; */
   font-size: clamp(0.875rem, 0.446rem + 2.14vw, 1.25rem);
   font-weight: bold;
   letter-spacing: -0.5;
   text-align: center;
-  line-height: 80px;
+  /* line-height: 80px; */
+  line-height: clamp(2.5rem, 0.395rem + 10.53vw, 5rem);
 
 }
 
 .map {
-  height: 500px;
+  /* height: 500px; */
+  height: clamp(18.75rem, 4.464rem + 71.43vw, 31.25rem);
   width: 500px;
   background-color: var(--dark-bg);
   border: 2px solid var(--white);
   border-radius: 20px;
   overflow: hidden;
+  margin:0px 30px;
+
 }
 
 .contacts__text {
 display: flex;
 flex-direction: column;
-height: 500px;
+/* height: 500px; */
 width: 500px;
 }
 

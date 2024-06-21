@@ -8,7 +8,7 @@
     syncTouch: true,
     smooth: true,
     smoothTouch: false,
-    touchMultiplier: 2,
+    touchMultiplier: 1,
   });
   
   function raf(time) {
