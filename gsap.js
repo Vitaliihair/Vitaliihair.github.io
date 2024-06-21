@@ -17,11 +17,7 @@
   }
   requestAnimationFrame(raf);
   
-  
-
 // gsap
-
-
 
 gsap.from ('.nav', .5 , {
     y: -20,
@@ -45,15 +41,13 @@ gsap.from ('.acquaintance__container--btn', {
     
 })
 
-
- // use A Script Tag Or An External Js File
- document.addEventListener("DOMContentLoaded", (event) => {
+// Scroll trigger animation
+  document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger)
   // gsap code here!
 
-
+// Animation portfolio
 const elements = document.querySelectorAll('.portfolio__container--item');
-
 elements.forEach((element, index) => {
   const direction = index % 1 === 0 ? -1 : 1;
 
@@ -70,11 +64,8 @@ elements.forEach((element, index) => {
   });
 });
 
-
+// Animation right button
 const fixed__btn = document.querySelectorAll('.fixed__btn');
-
-// gsap.registerPlugin(ScrollTrigger);
-
 gsap.from(fixed__btn, {
   
   scrollTrigger: {

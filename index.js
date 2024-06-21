@@ -1,6 +1,5 @@
-
+// Yandex maps
 let center = [43.5951976893704,39.717826278298716];
-
 function Init(){
     let map = new ymaps.Map('map', {
         center: center,
@@ -12,12 +11,9 @@ function Init(){
     });
     map.geoObjects.add(placemark);
 }
-
 ymaps.ready(Init);
 
 // Shake Button
-
-
 function shakeButton() {
     let button = document.getElementById('btn');
     
