@@ -71,5 +71,22 @@ elements.forEach((element, index) => {
 });
 
 
+const fixed__btn = document.querySelectorAll('.fixed__btn');
+
+// gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(fixed__btn, {
+  
+  scrollTrigger: {
+    trigger: ".portfolio__container-title",
+    start: "top center",
+    scrub: true, // Привязка анимации к прокрутке
+    // end: "bottom 50%",
+    toggleActions: "play none none none"
+  },
+  opacity: 0,
+  duration: 1,
+});
+
 
  });

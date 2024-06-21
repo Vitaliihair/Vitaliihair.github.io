@@ -192,28 +192,41 @@ html, body {
   top: 3px;
 }
 
-.acquaintance__btn {
-  position: sticky;
-  /* display: inline-block; */
-  height: 70 px;
-  padding: 30.9px 27.2px 30.51px;
-  border-radius: 10px;
-  background-color: var(--accent);
-  color: var(--white);
-  letter-spacing: 0.15px;
-  /* font-size: 36px; */
-  font-size: clamp(1.125rem, 0.596rem + 2.65vw, 2.25rem);
-  font-weight: medium ;
+
+
+
+
+.fixed__btn {
+  /* width: 30px;
+  height: 60px; */
+  display: flex;
+  /* flex-direction: column;  */
+  align-items: center; 
+  justify-content: center; 
+  /* border: 1px solid black; */
+  writing-mode: vertical-lr; 
+  /* transform: rotate(180deg);  */
+  /* text-decoration: none;  */
+  color: var(--white) ;
+  background-color:var(--accent);
+  padding: 10px;
+  margin-left: auto;
+  border-radius: 10px 0px 0px 10px ;
+  position: fixed;
+  top: 50dvh; right: 0;
   transition: opacity 0.5 ease-in;
+  text-orientation: upright;
+  font-size: 16px;
+  letter-spacing: -5px;
+  
 }
 
-.acquaintance__btn:hover {
+.fixed__btn:hover {
   opacity: 0.8;
 }
 
-.acquaintance__btn:active {
-  position: relative;
-  top: 3px;
+.fixed__btn:active {
+  right: 2px;
 }
 
 
