@@ -89,6 +89,7 @@ html, body {
 }
 
 .nav-list__link {
+  position: relative;
   color: var(--header-text);
   transition: opasity 0.2s ease-in;
 }
@@ -98,20 +99,28 @@ html, body {
 
 /* .nav-list__link--active{
   position: relative;
-}
+} */
 
-.nav-list__link--active::before {
+.nav-list__link:before {
   content: "";
 
   position: absolute;
-  left: 0;
-  top: 100%;
+  left: 50%;
+ transform: translateX(-50%);
 
-  display: block;
+  /* display: block;
+  height: 2px; */
+
+  width: 0;
+  background-color:var(--header-text) ;
   height: 2px;
+  bottom: 0;
+  transition: all .09s ease-out;
+}
+
+.nav-list__link:hover::before {
   width: 100%;
-  background-color: var(--accent)  ;
-} */
+}
 
 .acquaintance__logo {
   margin: 0px 20px;
