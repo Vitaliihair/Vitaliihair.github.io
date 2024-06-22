@@ -3,11 +3,14 @@ let center = [43.5951976893704,39.717826278298716];
 function Init(){
     let map = new ymaps.Map('map', {
         center: center,
-        zoom: 18
+        zoom: 18,
+        scrollZoom: false ,
+        behaviors:['drag']
     });
 
     let placemark = new ymaps.Placemark (center, {}, {
        searchControlProvider: 'yandex#search'
+       
     });
     map.geoObjects.add(placemark);
 }
