@@ -5,7 +5,7 @@ function Init(){
         center: center,
         zoom: 18,
         scrollZoom: false ,
-        behaviors:['drag' ],
+        behaviors:['none'],
         oneFingerZoom:false,
     });
 
