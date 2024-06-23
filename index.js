@@ -5,7 +5,8 @@ function Init(){
         center: center,
         zoom: 18,
         scrollZoom: false ,
-        behaviors:['drag']
+        behaviors:['drag' ],
+        oneFingerZoom:false,
     });
 
     let placemark = new ymaps.Placemark (center, {}, {
