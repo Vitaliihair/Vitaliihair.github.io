@@ -227,8 +227,8 @@ html, body {
   transition: opacity 0.5 ease-in;
   text-orientation: upright;
   /* font-size: 16px; */
-  font-size: clamp(0.75rem, 0.464rem + 1.43vw, 1rem);
-  letter-spacing: -4px;
+  font-size: clamp(0.75rem, 0.375rem + 1.67vw, 1rem);
+  letter-spacing: -2px;
   
 }
 
