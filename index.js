@@ -6,7 +6,7 @@ function Init(){
         zoom: 18,
         scrollZoom: false ,
         behaviors:['none'],
-        oneFingerZoom:false,
+        // oneFingerZoom:false,
     });
 
     let placemark = new ymaps.Placemark (center, {}, {
