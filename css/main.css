@@ -550,6 +550,10 @@ font-weight: 400;
 
 }
 
+#mail-link {
+  color: var(--accent);
+}
+
 @media (width < 660px) {
   .acquaintance__container--title strong {
    font-size: 45px ;

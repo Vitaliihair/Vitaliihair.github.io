@@ -41,7 +41,7 @@ gsap.from ('.acquaintance__container--btn', {
     
 })
 
-// Scroll trigger animation
+// Scroll trigger animation Portfolio
   document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger)
   // gsap code here!
@@ -63,6 +63,24 @@ elements.forEach((element, index) => {
     duration: 1 + index
   });
 });
+
+// Animation pricelist
+// const price = document.querySelectorAll('.men-pricelist--item');
+// elements.forEach((element, index) => {
+//   const items = index % 1 === 0 ? -1 : 1;
+
+//   gsap.from(element, {
+//     scrollTrigger: {
+//       trigger: element,
+//       start: "top bottom",
+//       end: "center 40%",
+//       scrub: true,
+//     },
+//     opacity: 0,
+//     x: items * 600,
+//     duration: 1 + index
+//   });
+// });
 
 // Animation right button
 const fixed__btn = document.querySelectorAll('.fixed__btn');
