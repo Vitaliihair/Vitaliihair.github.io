@@ -64,25 +64,40 @@ elements.forEach((element, index) => {
   });
 });
 
-// Animation pricelist
-// const price = document.querySelectorAll('.men-pricelist--item');
-// elements.forEach((element, index) => {
-//   const items = index % 1 === 0 ? -1 : 1;
+const pricelist = document.querySelectorAll('.men-pricelist--item');
+gsap.from(pricelist, {
+  
+  scrollTrigger: {
+    trigger: ".men-pricelist--item",
+    start: "top 90%",
+    scrub: true, // Привязка анимации к прокрутке
+    // end: "bottom 50%",
+    toggleActions: "play none none none"
+  },
+  x:-300,
+  opacity: 0,
+  duration: 1,
+});
 
-//   gsap.from(element, {
-//     scrollTrigger: {
-//       trigger: element,
-//       start: "top bottom",
-//       end: "center 40%",
-//       scrub: true,
-//     },
-//     opacity: 0,
-//     x: items * 600,
-//     duration: 1 + index
-//   });
-// });
+const pricelist1 = document.querySelectorAll('.men-pricelist--item1');
+gsap.from(pricelist1, {
+  
+  scrollTrigger: {
+    trigger: ".men-pricelist--item1",
+    start: "top 90%",
+    scrub: true, // Привязка анимации к прокрутке
+    // end: "bottom 50%",
+    toggleActions: "play none none none"
+  },
+  x:300,
+  opacity: 0,
+  duration: 1,
+});
+
+
 
 // Animation right button
+
 const fixed__btn = document.querySelectorAll('.fixed__btn');
 gsap.from(fixed__btn, {
   
