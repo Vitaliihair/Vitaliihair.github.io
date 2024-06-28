@@ -64,37 +64,41 @@ elements.forEach((element, index) => {
   });
 });
 
-const pricelist = document.querySelectorAll('.men-pricelist--item');
-gsap.from(pricelist, {
-  
-  scrollTrigger: {
-    trigger: ".men-pricelist--item",
-    start: "top 90%",
-    scrub: true, // Привязка анимации к прокрутке
-    // end: "bottom 50%",
-    toggleActions: "play none none none"
-  },
-  x:-300,
-  opacity: 0,
-  duration: 1,
-});
+// Animation portfolio
+const elementMen = document.querySelectorAll('.men-pricelist--item');
+elementMen.forEach((elementMen, index) => {
+  const direct = index % 1 === 0 ? -1 : 1;
 
-const pricelist1 = document.querySelectorAll('.men-pricelist--item1');
-gsap.from(pricelist1, {
-  
-  scrollTrigger: {
-    trigger: ".men-pricelist--item1",
-    start: "top 90%",
-    scrub: true, // Привязка анимации к прокрутке
-    // end: "bottom 50%",
-    toggleActions: "play none none none"
-  },
-  x:300,
-  opacity: 0,
-  duration: 1,
+  gsap.from(elementMen, {
+    scrollTrigger: {
+      trigger: elementMen,
+      start: "top bottom",
+      end: "center 80%",
+      scrub: true, // Привязка анимации к прокрутке
+    },
+    opacity: 0,
+    x: direct * 600,
+    duration: 1 + index
+  });
 });
 
 
+const elementWomen = document.querySelectorAll('.men-pricelist--item1');
+elementWomen.forEach((elementWomen, index) => {
+  const direct1 = index % 1 === 0 ? -1 : 1;
+
+  gsap.from(elementWomen, {
+    scrollTrigger: {
+      trigger: elementWomen,
+      start: "top bottom",
+      end: "center 80%",
+      scrub: true, // Привязка анимации к прокрутке
+    },
+    opacity: 0,
+    x: direct1 * -600,
+    duration: 1 + index
+  });
+});
 
 // Animation right button
 

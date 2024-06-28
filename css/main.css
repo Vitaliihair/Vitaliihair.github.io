@@ -33,16 +33,21 @@
     --header-text:var(--white);
     --accent:var(--purple)
   }
+  
+  /* html{
+    scroll-behavior: smooth;
+  } */
 
 html, body {
-  scroll-behavior: initial;
+  /* scroll-behavior: initial; */
   overflow: hidden;
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   background-color: var(--dark-bg);
-}
+  user-select: none;
+
 
 .container {
   margin: 0 auto;
@@ -128,6 +133,10 @@ html, body {
   left: 42px;
   top: 166px;
   justify-content: center;
+}
+
+video {
+  width: 500px;
 }
 
 /* Title */
@@ -462,7 +471,7 @@ html, body {
 .info__text {
   /* width: fit-content; */
   display: flex;
-  flex: 1;
+  /* flex: 1; */
   max-width: 609px;
   padding: 5px 10px;
   
@@ -472,6 +481,7 @@ html, body {
   height: clamp(16.787rem, -2.329rem + 95.58vw, 36.5rem);
    align-items:center;
 }
+
 
  .my-job{
   border: 2px dotted var(--white);

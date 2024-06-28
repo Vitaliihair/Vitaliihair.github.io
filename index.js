@@ -23,6 +23,17 @@ function shakeButton() {
 
 shakeButton();
 
+
+// Плавная прокрутка по якорным ссылкам
+
+function slowScroll(id) {
+  let offset = 0;
+  $('html , body').animate({
+    scrollTop:$(id).offset().top - offset
+  }, 1000);
+  return false;
+}
+
 // Yandex maps
 let center = [43.5951976893704,39.717826278298716];
 function Init(){
@@ -41,6 +52,8 @@ function Init(){
     map.geoObjects.add(placemark);
 }
 ymaps.ready(Init);
+
+
 
 
 
