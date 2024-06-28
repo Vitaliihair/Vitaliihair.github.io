@@ -59,7 +59,7 @@ elements.forEach((element, index) => {
       scrub: true, // Привязка анимации к прокрутке
     },
     opacity: 0,
-    x: direction * 600,
+    x: direction * 1000,
     duration: 1 + index
   });
 });
@@ -109,7 +109,6 @@ gsap.from(fixed__btn, {
     trigger: ".portfolio__container-title",
     start: "top center",
     scrub: true, // Привязка анимации к прокрутке
-    // end: "bottom 50%",
     toggleActions: "play none none none"
   },
   opacity: 0,
