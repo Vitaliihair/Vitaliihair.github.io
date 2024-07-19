@@ -44,9 +44,9 @@ gsap.from ('.acquaintance__container--btn', {
 // Scroll trigger animation Portfolio
   document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger)
-  // gsap code here!
 
 // Animation portfolio
+
 const elements = document.querySelectorAll('.portfolio__container--item');
 elements.forEach((element, index) => {
   const direction = index % 1 === 0 ? -1 : 1;
@@ -64,7 +64,8 @@ elements.forEach((element, index) => {
   });
 });
 
-// Animation portfolio
+// Animation price
+
 const elementMen = document.querySelectorAll('.men-pricelist--item');
 elementMen.forEach((elementMen, index) => {
   const direct = index % 1 === 0 ? -1 : 1;

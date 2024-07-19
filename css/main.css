@@ -136,7 +136,10 @@ html, body {
 }
 
 video {
-  width: 500px;
+ width: 100%;
+  height: auto;
+  max-height: 100%;
+
 }
 
 /* Title */
@@ -346,6 +349,12 @@ video {
 .container__items--icon {
   height: 40px;
   width: 40px;
+}
+
+.youtube{
+height:34px;
+width: 34px;
+margin-top: 3px;
 }
 
 .footer__container {
@@ -580,4 +589,4 @@ font-weight: 400;
   .portfolio__container--name {
     font-size: 12px ;
   }
-}
+}}
