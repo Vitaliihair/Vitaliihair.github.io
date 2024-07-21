@@ -75,7 +75,7 @@ elementMen.forEach((elementMen, index) => {
       trigger: elementMen,
       start: "top bottom",
       end: "center 80%",
-      scrub: true, // Привязка анимации к прокрутке
+      scrub: true,
     },
     opacity: 0,
     x: direct * 600,
@@ -115,6 +115,33 @@ gsap.from(fixed__btn, {
   opacity: 0,
   duration: 1,
 });
+
+const myJob = document.querySelectorAll('.my-job');
+gsap.from(myJob, {
+  
+  scrollTrigger: {
+    trigger: ".my-job",
+    start: "top 80%",
+    scrub: true, // Привязка анимации к прокрутке
+    toggleActions: "play none none none"
+  },
+  opacity: 0,
+  duration: 2,
+});
+
+const spanText = document.querySelectorAll('.span-text');
+gsap.from(spanText, {
+  
+  scrollTrigger: {
+    trigger: ".span-text",
+    start: "top 80%",
+    scrub: true, // Привязка анимации к прокрутке
+    toggleActions: "play none none none"
+  },
+  opacity: 0,
+  duration: 2,
+});
+
 
 
  });
