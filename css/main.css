@@ -191,19 +191,51 @@ video {
 
 .acquaintance__container--btn{
   display: inline-block;
-  height: 70 px;
-  padding: 30.9px 27.2px 30.51px;
+  /* height: 70 px; */
+  /* padding: 30.9px 27.2px 30.51px; */
   margin-bottom: 30px;
   border-radius: 10px;
+  background-image:  linear-gradient(123deg, red, yellow, green, cyan, blue, magenta, red);
+  position: relative;
   background-color: var(--accent);
   color: var(--white);
   letter-spacing: 0.15px;
   /* font-size: 36px; */
   font-size: clamp(1.125rem, 0.596rem + 2.65vw, 2.25rem);
   font-weight: medium ;
-  transition: opacity 0.5 ease-in;
-
+  /* transition: opacity 0.5s ease-in; */
+  overflow: hidden;
+background-position: 30px ;
+  animation: play 1s ease-in infinite;
 }
+.acquaintance__container--btn span {
+  margin: 4px;
+  background: var(--accent);
+  display: block;
+  border-radius: 10px;
+  padding: 14px;
+}
+@keyframes play {
+  0% {
+    background-position: 0px ;
+  }
+  20% {
+    background-position: 110px ;
+  }
+  35% {
+    background-position: 180px ;
+  }
+  50% {
+    background-position: 210px ;
+  }
+  80% {
+    background-position: 350px ;
+  }
+  100% {
+    background-position: 390px ;
+  }
+}
+
 
 .btn__dikidi {
   max-height: 40px;
@@ -230,11 +262,13 @@ video {
   font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
   font-weight: medium ;
   transition: opacity 0.5 ease-in;
+  
 
 }
 
 .acquaintance__container--btn:hover {
   opacity: 0.8;
+
 }
 
 .acquaintance__container--btn:active {

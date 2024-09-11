@@ -1,27 +1,27 @@
 // Shake Button
-function shakeButton() {
-  let button = document.getElementById('btn');
+// function shakeButton() {
+//   let button = document.getElementById('btn');
   
-  // Трясем кнопку 4 раза
-  for (let i = 0; i < 4; i++) {
-    setTimeout(() => {
-      button.style.transform = 'translate(3px, 0)';
-    }, i * 100);
-    setTimeout(() => {
-      button.style.transform = 'translate(-3px, 0)';
-    }, (i * 100) + 50);
-    setTimeout(() => {
-      button.style.transform = 'translate(0, 0)';
-    }, (i * 100) + 100);
-  }
+//   // Трясем кнопку 4 раза
+//   for (let i = 0; i < 4; i++) {
+//     setTimeout(() => {
+//       button.style.transform = 'translate(3px, 0)';
+//     }, i * 100);
+//     setTimeout(() => {
+//       button.style.transform = 'translate(-3px, 0)';
+//     }, (i * 100) + 50);
+//     setTimeout(() => {
+//       button.style.transform = 'translate(0, 0)';
+//     }, (i * 100) + 100);
+//   }
 
-  // Задержка перед следующим тряском
-  setTimeout(() => {
-    shakeButton();
-  }, 2000);
-}
+//   // Задержка перед следующим тряском
+//   setTimeout(() => {
+//     shakeButton();
+//   }, 2000);
+// }
 
-shakeButton();
+// shakeButton();
 
 
 // Плавная прокрутка по якорным ссылкам
