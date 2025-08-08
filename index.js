@@ -1,29 +1,3 @@
-// Shake Button
-// function shakeButton() {
-//   let button = document.getElementById('btn');
-  
-//   // Трясем кнопку 4 раза
-//   for (let i = 0; i < 4; i++) {
-//     setTimeout(() => {
-//       button.style.transform = 'translate(3px, 0)';
-//     }, i * 100);
-//     setTimeout(() => {
-//       button.style.transform = 'translate(-3px, 0)';
-//     }, (i * 100) + 50);
-//     setTimeout(() => {
-//       button.style.transform = 'translate(0, 0)';
-//     }, (i * 100) + 100);
-//   }
-
-//   // Задержка перед следующим тряском
-//   setTimeout(() => {
-//     shakeButton();
-//   }, 2000);
-// }
-
-// shakeButton();
-
-
 // Плавная прокрутка по якорным ссылкам
 
 function slowScroll(id) {
@@ -54,9 +28,127 @@ function Init(){
 ymaps.ready(Init);
 
 
+function togglePopup(event) {
+  event.preventDefault();
+  const popup = document.getElementById('popup');
+  popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+}
+
+// Вешаем обработчики на обе кнопки после загрузки DOM
+document.addEventListener('DOMContentLoaded', function() {
+  const btn = document.getElementById('btn');
+  const btn1 = document.getElementById('btn1');
+  
+  if (btn) btn.addEventListener('click', togglePopup);
+  if (btn1) btn1.addEventListener('click', togglePopup);
+
+  // Обработчик закрытия попапа
+  document.addEventListener('click', function(event) {
+    const popup = document.getElementById('popup');
+    if (!popup) return;
+    
+    const popupContent = document.querySelector('.popup-content');
+    const isBtn = event.target.closest('#btn, #btn1');
+    
+    if (popup.style.display === 'flex' && !isBtn && !popupContent.contains(event.target)) {
+      popup.style.display = 'none';
+    }
+  });
+});
 
 
 
+//  function togglePopup(event) {
+//     event.preventDefault();
+//     const popup = document.getElementById('popup');
+//     popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+//   }
+
+//   // Обработчик закрытия попапа
+//   document.addEventListener('click', function(event) {
+//     const popup = document.getElementById('popup');
+//     const btn = document.getElementById('btn');
+//     const btn = document.getElementById('btn1');
+//     const popupContent = document.querySelector('.popup-content');
+    
+//     if (popup.style.display === 'flex' && 
+//         !popupContent.contains(event.target) && 
+//         event.target !== btn && 
+//         !btn.contains(event.target)) {
+//       popup.style.display = 'none';
+//     }
+//   });
+
+// function togglePopup(event) {
+//   event.preventDefault();
+//   const popup = document.getElementById('popup');
+//   popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+// }
+
+// // Назначаем обработчики для обеих кнопок
+// document.getElementById('btn').addEventListener('click', togglePopup);
+// document.getElementById('btn1').addEventListener('click', togglePopup);
+
+// // Обработчик закрытия попапа
+// document.addEventListener('click', function(event) {
+//   const popup = document.getElementById('popup');
+//   const btn = document.getElementById('btn');
+//   const btn1 = document.getElementById('btn1');
+//   const popupContent = document.querySelector('.popup-content');
+  
+//   if (popup.style.display === 'flex' && 
+//       !popupContent.contains(event.target) && 
+//       event.target !== btn && 
+//       event.target !== btn1 && 
+//       !btn.contains(event.target) &&
+//       !btn1.contains(event.target)) {
+//     popup.style.display = 'none';
+//   }
+// });
+
+// // Открытие попапа по клику на кнопку Записаться
+//  function togglePopup(event) {
+//     event.preventDefault();
+//     const popup = document.getElementById('popup');
+//     if (popup.style.display === 'none') {
+//       popup.style.display = 'flex';
+//     } else {
+//       popup.style.display = 'none';
+//     }
+//   }
+  
+//   // Закрытие попапа при клике вне его области
+//   document.addEventListener('click', function(event) {
+//     const popup = document.getElementById('popup');
+//     const btn = document.getElementById('btn');
+    
+//     if (popup.style.display === 'flex' && 
+//         !popup.contains(event.target) && 
+//         event.target !== btn && 
+//         !btn.contains(event.target)) {
+//       popup.style.display = 'none';
+//     }
+//   });
+
+// function togglePopup(event) {
+//     event.preventDefault();
+//     const popup = document.getElementById('popup');
+//     popup.style.display = popup.style.display === 'flex' ? 'none' : 'flex';
+//   }
+
+  // // Исправленный обработчик закрытия попапа
+  // document.addEventListener('click', function(event) {
+  //   const popup = document.getElementById('popup');
+  //   const btn = document.getElementById('btn');
+  //   const popupContent = document.querySelector('.popup-content');
+    
+  //   // Если попап открыт и клик был не по кнопке и не по контенту попапа
+  //   if (popup.style.display === 'flex' && 
+  //       !popupContent.contains(event.target) && 
+  //       event.target !== btn) {
+  //     popup.style.display = 'none';
+  //   }
+  // });
 
 
 

@@ -25,7 +25,7 @@
     --black: #171718 ;
     --black-border: #26292d ;
     --white: #fff ;
-    --purple: #5c62ec ;
+    --purple: #5c61ec99;
 
     
     --dark-bg:var(--black) ;
@@ -158,8 +158,6 @@ video {
   /* gap: 30px; */
 }
 
-
-
 .acquaintance__container{
   max-width: 660px;
   padding: 0 15px;
@@ -190,12 +188,12 @@ video {
 
 
 .acquaintance__container--btn{
-  display: inline-block;
+  /* display: inline-block; */
   /* height: 70 px; */
-  /* padding: 30.9px 27.2px 30.51px; */
+  padding: 10px 10px 10px;
   margin-bottom: 30px;
   border-radius: 10px;
-  background-image:  linear-gradient(123deg, red, yellow, green, cyan, blue, magenta, red);
+  /* background-image:  linear-gradient(123deg, red, yellow, green, cyan, blue, magenta, red); */
   position: relative;
   background-color: var(--accent);
   color: var(--white);
@@ -203,19 +201,193 @@ video {
   /* font-size: 36px; */
   font-size: clamp(1.125rem, 0.596rem + 2.65vw, 2.25rem);
   font-weight: medium ;
-  /* transition: opacity 0.5s ease-in; */
-  overflow: hidden;
-background-position: 30px ;
-  animation: play 1s ease-in infinite;
+  transition: opacity 0.5s ease-in;
+  overflow: hidden; 
+  /* background-position: 30px ; */
+  /* animation: play 1s linear infinite; */
+  /* transform: translate(-50%,-50%); */
+  text-decoration:none;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
 }
-.acquaintance__container--btn span {
+
+/* .acquaintance__container--btn span {
   margin: 4px;
-  background: var(--accent);
+  background: var (--accent);
   display: block;
   border-radius: 10px;
   padding: 14px;
+ } */
+ /* Основные стили попапа */
+  .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+  }
+  
+  .popup-content {
+      background: rgba(23, 23, 24, 0.2); /* Полупрозрачный фон (немного темнее основного) */
+    backdrop-filter: blur(0px); /* Эффект матового стекла */
+    border: 1px solid rgba(92, 98, 236, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 280px;
+    box-shadow: 0 0 20px rgba(92, 98, 236, 0.2); /* Свечение по контуру */
+    animation: glow-pulse 1.3s infinite alternate; /* Мерцание рамки */
+    /* background-color: rgba(255,255,255,0.9); */
+    /* padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+    max-width: 90%; */
+    /* box-shadow: 0 20px 50px rgba(0,0,0,0.3); */
+    /* animation: fadeIn 0.3s ease-out; */
+
+ /* linear-gradient(rgba(23, 23, 24, 0.9), rgba(23, 23, 24, 0.9)),
+    url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h20v20H0z" fill="none"/><path d="M10 10h1v1h-1z" stroke="rgba(92,98,236,0.1)" stroke-width="0.5"/></svg>');
+  border-radius: 12px; */
+/* backdrop-filter: blur(80px); */
+    /* background: #0f0f10; */
+  /* border: 1px solid transparent;
+  box-shadow: 0 0 10px rgba(92, 98, 236, 0.3);
+  animation: borderGlow 3s infinite alternate; */
+
+     /* background: rgba(30, 30, 32, 0.9); 
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(92, 98, 236, 0.3);
+  box-shadow: 0 0 30px rgba(92, 98, 236, 0.2);  */
+  }
+
+  /* @keyframes borderGlow {
+  from { box-shadow: 0 0 10px rgba(92, 98, 236, 0.3); }
+  to { box-shadow: 0 0 20px rgba(92, 98, 236, 0.6); } */
 }
-@keyframes play {
+
+  @keyframes glow-pulse {
+    from {
+      box-shadow: 0 0 10px rgba(67, 107, 238, 0.6),
+                  0 0 20px rgb(92, 97, 236);
+    }
+    to {
+      box-shadow: 0 0 15px rgba(92, 98, 236, 0.3),
+                  0 0 30px rgba(92, 98, 236, 0.2);
+    }
+  }
+
+  /* Адаптация существующих стилей кнопки для попапа */
+  .acquaintance__container--btn.popup-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 20px 25px;
+    text-align: center;
+    font-size: clamp(1rem, 0.7rem + 1.5vw, 1.5rem);
+    transition: all 0.3s ease;
+
+    background: rgba(92, 97, 236, 0.4);
+  /* background: #5c62ec;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(92, 98, 236, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s; */
+
+  }
+
+
+
+  .acquaintance__container--btn.popup-btn:hover {
+    /* opacity: 0.9; */
+    transform: translateY(-2px);
+     box-shadow: 0 0 20px rgba(92, 98, 236, 0.3);
+     /* background: rgba(92, 98, 236, 0.3); */
+  } 
+
+  /* Анимация появления попапа */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Медиазапросы для адаптации */
+  @media (max-width: 768px) {
+    .popup-content {
+      padding: 20px;
+      gap: 15px;
+    }
+    
+    .acquaintance__container--btn.popup-btn {
+      padding: 15px 20px;
+    }
+  }
+ /* .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 250px;
+  }
+  .acquaintance__container--btn.popup-btn {
+    display: block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .acquaintance__container--btn.popup-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .acquaintance__container--btn span {
+    display: inline-block;
+  } */
+/* .acquaintance__container--btn::before{
+  content: '';
+position: absolute;
+top: 2px;
+left: 2px;
+bottom: 2px;
+width: 50%;
+background: rgba(255,255,255,0.05);
+} */
+/* @keyframes play {
   0% {
     background-position: 0px ;
   }
@@ -234,7 +406,7 @@ background-position: 30px ;
   100% {
     background-position: 390px ;
   }
-}
+} */
 
 
 .btn__dikidi {
@@ -427,11 +599,14 @@ margin-top: 3px;
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
+  
 }
 
 .copyright {
   /* font-size: 16px; */
-  font-size: clamp(0.75rem, 0.539rem + 1.05vw, 1rem);
+  /* font-size: clamp(0.75rem, 0.539rem + 1.05vw, 1rem); */
+   font-size: clamp(8px, 0.5rem + 0.2vw, 10px); 
+  text-align: center;
 }
 
 /* Price */
@@ -655,3 +830,36 @@ font-weight: 400;
     font-size: 12px ;
   }
 }}
+
+ .footer__legal {
+    text-align: center; /* Центрирование текста */
+    font-size: 12px;   /* Маленький размер шрифта */
+    line-height: 1.4;  /* Удобочитаемый межстрочный интервал */
+    color: #666;       /* Серый цвет для менее навязчивого вида */
+    padding: 20px 0;   /* Отступы сверху и снизу */
+    max-width: 800px;   /* Максимальная ширина блока */
+    margin: 0 auto;    /* Автоматические отступы по бокам для центрирования */
+
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+   font-size: clamp(0.75rem, 0.539rem + 1.05vw, 1rem);
+}
+
+
+  
+  
+  .copyright a {
+    color: #555;       /* Цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+  }
+  
+  .copyright a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+  }
+  
+ .copyright p {
+    margin: 8px 0;     /* Отступы между параграфами */
+  }

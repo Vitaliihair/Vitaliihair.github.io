@@ -41,9 +41,20 @@ gsap.from ('.acquaintance__container--btn', {
     
 })
 
+// Animation text 
+
+gsap.to ('.acquaintance__container--title', {
+  duration: 0.5,
+  opacity: 1,
+  stagger: 0.05, // задержка между элементами
+  y: 0,
+  ease: "back.out"
+});
+
 // Scroll trigger animation Portfolio
   document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger)
+  
 
 // Animation portfolio
 
@@ -140,6 +151,18 @@ gsap.from(spanText, {
   },
   opacity: 0,
   duration: 2,
+});
+
+
+gsap.registerPlugin(TextPlugin);
+  gsap.registerPlugin(SplitText);
+
+  gsap.to ('.acquaintance__container--title', {
+  duration: 0.5,
+  opacity: 1,
+  stagger: 0.05, // задержка между элементами
+  y: 0,
+  ease: "back.out"
 });
 
 
